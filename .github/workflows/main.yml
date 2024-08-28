@@ -5,7 +5,7 @@ run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 jobs:
   lint:
     name: lint all the python code
-    runs-on: linux
+    runs-on: ubuntu-latest
     steps:
       - name: install stuff
         run: "curl -LsSf https://astral.sh/ruff/install.sh | sh"
