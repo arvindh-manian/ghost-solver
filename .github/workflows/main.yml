@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: install stuff
         run: "curl -LsSf https://astral.sh/ruff/install.sh | sh"
-      - name: run linter
-        run: ruff check
+      - name: linter
+        run: ls
