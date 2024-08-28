@@ -1,0 +1,13 @@
+name: linter
+on: pull_request
+run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+
+jobs:
+  lint:
+    name: lint all the python code
+    runs-on: linux
+    steps:
+      - name: install stuff
+        run: "curl -LsSf https://astral.sh/ruff/install.sh | sh"
+      - name: run linter
+        run: ruff check
